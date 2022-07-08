@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E5l9</title>
+        <script src="js/index.js" defer></script>
+    </head>
+
+    <body>
+        <div class="Formulario">
+            <form action="">
+                <div class="inputRadio">
+                    <input type="radio" name="nmTemperatura" id="idTKelvin" checked>
+                    <label for="idTKelvin">Kelvin</label>
+               
+                    <input type="radio" name="nmTemperatura" id="idTCelsius">
+                    <label for="idTCelsius">Celsius</label>
+               
+                    <input type="radio" name="nmTemperatura" id="idTFahrenheit">
+                    <label for="idTFahrenheit">Fahrenheit</label>
+                </div>
+                <div class="inputNumber">
+                    <label for="idValorTemp" id="idLbValorTemp">Temperatura</label>
+                    <input type="number" id="idValorTemp" name="nmValorTemp" step="0.01">
+                </div>
+                <div>
+                    <output id="idOut">Valor:</output>
+                </div>
+                <div>
+                    <button type="button" id="idBtConverter">Converter</button>
+                </div>
+       
+            </form>
+        </div>
+        
+        
+    </body>
+</html>

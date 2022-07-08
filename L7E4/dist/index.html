@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="js/index.js" defer></script>
+            <title>L7E4</title>
+            
+        </head>
+        <body>
+            <div id="idDivFundo" class="clFundo">
+                <div id="titulo">
+                    <h1>Relatório de Temperaturas</h1>
+                </div>
+
+            <form action="">
+                <div class="clInput">
+                                        
+                    <div>
+                        <label for="idLbTemp">Informe a Temperatura:</label>
+                        <input type="number" name="nmTemp" id="idTemp">
+                    </div>
+                    <div>
+                        <label for="idLbDia">Informe o dia:</label>
+                        <input type="number" name="nmDia" id="idDia">
+                    </div>
+
+                </div>
+
+                <div class="clCaixaBotoes">
+                    <div class="clbotao">
+                        <input type="button" id="idCapturarDados" value="Capturar Dados"> 
+
+                        <!--onclick="capturarelementos()"-->
+                    </div>
+
+                    <div class="clbotao">             
+                        <input type="button" value="Relatório" id="idRelatorio">
+                        <!--onclick="executar()"-->
+                    </div>
+
+                </div>
+
+                <div class="clDisplayResultado">
+                    <textarea id="idResultado" name="nmResultado"
+                        cols="30" rows="10" readonly>
+                    </textarea>
+                </div>
+
+              
+            </div>
+        <script>
+
+                var temperatura = []                
+                var saida = document.getElementById("idResultado")
+
+                function capturarelementos() {
+               
+                //captura e incrementa no array as temperatura digitadas
+                temperatura.push(Number(document.getElementById("idTemp").value))                   
+                 
+                console.table(temperatura)//mostra no console as temperatura dentro do array
+                
+                document.getElementById("idTemp").value = ""; //deixa caixa de digitação vazia
+                
+                if (temperatura.length == 30) {
+                    document.getElementById("idCapturarDados").disabled = true
+                }
+                }
+
+               
+                function executar() {
+                    
+                    let somaTemp = 0
+                    let media = 0
+                    let dia = Number(document.getElementById("idDia").value)
+            
+                    temperatura.forEach((element, index) => {
+                        somaTemp = somaTemp + element
+                        });            
+                        media = somaTemp / temperatura.length
+                        console.log(media);
+                        pegardia(dia, media)
+                
+                
+                
+                    function pegardia(dia, media) {
+                        
+                        temperatura.forEach((element, index) => {
+                        if ([i]>media) {
+                            
+                        }
+                        });            
+                            
+                }        
+                      
+            
+                    
+                      
+                   
+                    //saida.value = "A maior nota aparece nas posições: " + indMaiorNota.toString()
+  
+                }                             
+                    
+
+                                       
+        </script>
+        
+        </body>
+</html>
